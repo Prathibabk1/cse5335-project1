@@ -2,14 +2,28 @@
 <html>
 <head>
   <% include ../partials/header.ejs %>
+  <<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button1").click(function(){
+	   $.get("/getItems", function(data, status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+	
+   });
+});
+  
+  
 </head>
 
 <body>
 
   <% include ../partials/nav.ejs %>
 
-<button id="#button1">Click Me</button>
+<button id="button1">Click Me</button>
 
+<div id="div1"></div>
 
 </body>
 </html>
