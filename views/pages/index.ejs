@@ -5,17 +5,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
 <script>
- $("#result_times")
-    .find("tr")
-    .remove()
-    .end();   
-
- var table = $('#table1');   
+       
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(obj, status){
-            var tbl=$("<table/>").attr("id","mytable");
-    $("#div1").append(tbl);
     for(var i=0;i<obj.length;i++)
     {
         var tr="<tr>";
@@ -23,7 +16,7 @@ $(document).ready(function(){
         var td2="<td>"+obj[i]["name"]+"</td>";
         var td3="<td>"+obj[i]["color"]+"</td></tr>";
 
-       $("#mytable").append(tr+td1+td2+td3); 
+       $("#table1").append(tr+td1+td2+td3); 
 
     }   
 
@@ -44,15 +37,7 @@ $(document).ready(function(){
 
 <button id="button1">Click Me</button>
 
-<div id='result_times'>
-
-            <table>
-
-
-            </table>
-
-
-        </div>
+<table id="table1"></table>
 
 </body>
 </html>
