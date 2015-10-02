@@ -5,9 +5,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("button1").click(function(){
+    $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-            alert("Data: " +data+ "\nStatus: +status");
+            console.log("Data:  +data+ "+"Status: +status");
         });
     });
 	
