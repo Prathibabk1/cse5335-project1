@@ -16,22 +16,16 @@ app.get('/', function(request, response) {
    
 var obj=[
         {
-            id : "001",
-            name : "apple",
-            category : "fruit",
-            color : "red"
+            state:"Texas",
+            capital: "Autsin"
         },
         {
-            id : "002",
-            name : "melon",
-            category : "fruit",
-            color : "green"
+           state:"Texas",
+            capital: "Autsin"
         },
         {
-            id : "003",
-            name : "banana",
-            category : "fruit",
-            color : "yellow"
+            state:"Texas",
+            capital: "Autsin"
         }
     ]
 app.get('/getItems', function(req, res) {

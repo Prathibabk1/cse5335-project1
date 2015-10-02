@@ -11,12 +11,12 @@ $(document).ready(function(){
 	   $.get("/getItems", function(obj, status){
     for(var i=0;i<obj.length;i++)
     {
-        var tr="<tr>";
-        var td1="<td>"+obj[i]["id"]+"</td>";
-        var td2="<td>"+obj[i]["name"]+"</td>";
-        var td3="<td>"+obj[i]["color"]+"</td></tr>";
+        var tr="<tr><th>State</th><th>Capital</th><tr>";
+        var td1="<td>"+obj[i]["state"]+"</td>";
+        var td2="<td>"+obj[i]["capital"]+"</td>";
+        
 
-       $("#table1").append(tr+td1+td2+td3); 
+       $("#table1").append(tr+td1+td2); 
 
     }   
 
