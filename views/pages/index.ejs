@@ -7,7 +7,7 @@
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-            console.log("Data:  +data+ "+"Status: +status");
+            alert("Data: "+ data +"Status:" +status);
         });
     });
 	
