@@ -13,18 +13,27 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-    var obj = {"s1": {"state":"Texas", "capital": "Autsin" },
-                "s2":{"state":"Arizona", "capital": "Phoenix"},
-                "s3":{"state": "Atlanta", "capital" :"Georgia"},
-                 "s4":{"state":"Arkansas" , "capital":"Little Rock"},
-                 "s5":{"state":"Ohio","capital" : "Columbus"},
-                 "s6":{"state":"Kentucky" ,"capital":"Frankfort"},
-                 "s7":{"state":"Colorado", "capital" : "Denver"},
-                 "s8":{"state":"North Carolina","capital" :"Raleigh"},
-                 "s9":{"state":"South Carolina","capital" : "Columbia"},
-                 "s10":{"state":"Pennsylvania","capital":"Harrisburg"}
-
-          };
+   
+var obj=[
+        {
+            id : "001",
+            name : "apple",
+            category : "fruit",
+            color : "red"
+        },
+        {
+            id : "002",
+            name : "melon",
+            category : "fruit",
+            color : "green"
+        },
+        {
+            id : "003",
+            name : "banana",
+            category : "fruit",
+            color : "yellow"
+        }
+    ]
 app.get('/getItems', function(req, res) {
 
     res.contentType('application/json');

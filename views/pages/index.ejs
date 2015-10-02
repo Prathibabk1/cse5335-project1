@@ -13,15 +13,19 @@
  var table = $('#table1');   
 $(document).ready(function(){
     $("#button1").click(function(){
-	   $.get("/getItems", function(data, status){
-            $.each(data, function(){
-           table.append(
-               $('<tr></tr>').append(
-                    $('<td></td>').text(this.state),
-                    $('<td></td>').text(this.capital)
-                )
-          );
-        });
+	   $.get("/getItems", function(obj, status){
+            var tbl=$("<table/>").attr("id","mytable");
+    $("#div1").append(tbl);
+    for(var i=0;i<obj.length;i++)
+    {
+        var tr="<tr>";
+        var td1="<td>"+obj[i]["id"]+"</td>";
+        var td2="<td>"+obj[i]["name"]+"</td>";
+        var td3="<td>"+obj[i]["color"]+"</td></tr>";
+
+       $("#mytable").append(tr+td1+td2+td3); 
+
+    }   
 
         
         
