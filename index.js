@@ -13,9 +13,13 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/getItems',function(request, response){
-	response.render('pages/items');
-});
+var obj = { "foo" : "bar" };
+app.get('/getItems', function(req, res) {
+
+    res.contentType('application/json');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.json(obj)
+}); 
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
