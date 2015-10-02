@@ -7,12 +7,19 @@
 <script>
     
 
-    
+ var table = $('#table1');   
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-    
-            alert("Data: " + data.s1.state + "\nStatus: " + status);
+            $.each(data, function(){
+           table.append(
+               $('<tr></tr>').append(
+                    $('<td></td>').text(this.state),
+                    $('<td></td>').text(this.capital)
+                )
+          );
+        });
+
         
         
            
