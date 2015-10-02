@@ -13,6 +13,7 @@ $(document).ready(function(){
 	   $.get("/getItems", function(data, status){
            //table2.innerHTML ="<tr><th>State</th><th>capital</th></tr>";
            var jsonData=JSON.parse(data);
+           console.log(jsonData);
            for(var obj in jsonData){
             table2.innerHTML+="<tr><td>"+jsonData[obj].state+ "</td><td>"+jsonData[obj].capital+"</td></tr>";   
            }
