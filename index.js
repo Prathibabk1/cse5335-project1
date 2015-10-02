@@ -16,12 +16,12 @@ app.get('/', function(request, response) {
    
 var obj=[
         {
-            state:"Texas",
-            capital: "Autsin"
+            "state":"Texas",
+            "capital": "Autsin"
         },
         {
-           state:"Arizona", 
-            capital: "Phoenix"
+           "state":"Arizona", 
+            "capital": "Phoenix"
         },
         {
             state: "Atlanta", 
