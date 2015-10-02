@@ -3,11 +3,20 @@
 <head>
   <% include ../partials/header.ejs %>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
 <script>
+    
+var table=document.getElementById("table");
+    
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-            alert("Data: "+ data["foo"] +"Status:" +status);
+           table.innerHTML ="<tr><th>Name</th><th>Age</th><th>Country</th></tr>"
+           var jsonData=JSON.parse(data);
+           for(var obj in jsonData){
+            table.innerHTML+="<tr><td>"+jsonData[obj].state+ "</td><td>"+jsonData[obj].capital+"</td></tr>";   
+           }
+           
         });
     });
 	
@@ -22,7 +31,7 @@ $(document).ready(function(){
 
 <button id="button1">Click Me</button>
 
-<div id="div1"></div>
+<table id="table"></table>
 
 </body>
 </html>
