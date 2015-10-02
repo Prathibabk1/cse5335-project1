@@ -26,6 +26,34 @@ var obj=[
         {
             state: "Atlanta", 
             capital :"Georgia"
+        },
+        {
+            state:"Arkansas" ,
+            capital:"Little Rock"
+        },
+         {
+            state:"Ohio",
+            capital : "Columbus"
+        },
+        {
+            state:"Kentucky" ,
+            capital:"Frankfort"
+        },
+        {
+            state:"Colorado",
+            capital : "Denver"
+        },
+        {
+            state:"North Carolina",
+            capital :"Raleigh"
+        },
+         {
+            state:"South Carolina",
+             capital : "Columbia"
+        },
+        {
+            state:"Pennsylvania",
+            capital:"Harrisburg"
         }
     ]
 app.get('/getItems', function(req, res) {
