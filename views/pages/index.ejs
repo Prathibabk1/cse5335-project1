@@ -5,7 +5,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
 <script>
-    
+ $("#result_times")
+    .find("tr")
+    .remove()
+    .end();   
 
  var table = $('#table1');   
 $(document).ready(function(){
@@ -37,7 +40,15 @@ $(document).ready(function(){
 
 <button id="button1">Click Me</button>
 
-<table id="table1"></table>
+<div id='result_times'>
+
+            <table>
+
+
+            </table>
+
+
+        </div>
 
 </body>
 </html>
