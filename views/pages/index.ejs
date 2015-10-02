@@ -6,15 +6,15 @@
     
 <script>
     
-var table=document.getElementById("table1");
+var table2=document.getElementById("table1");
     
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-           table.innerHTML ="<tr><th>State</th><th>capital</th></tr>";
+           //table2.innerHTML ="<tr><th>State</th><th>capital</th></tr>";
            var jsonData=JSON.parse(data);
            for(var obj in jsonData){
-            table.innerHTML+="<tr><td>"+jsonData[obj].state+ "</td><td>"+jsonData[obj].capital+"</td></tr>";   
+            table2.innerHTML+="<tr><td>"+jsonData[obj].state+ "</td><td>"+jsonData[obj].capital+"</td></tr>";   
            }
            
         });
