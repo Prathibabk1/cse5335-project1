@@ -6,13 +6,13 @@
     
 <script>
     
-var table2=document.getElementById("table1");
+
     
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
     
-            alert("Data: " + data + "\nStatus: " + status);
+            alert("Data: " + data.s1.state + "\nStatus: " + status);
         
         
            
