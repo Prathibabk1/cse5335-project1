@@ -13,7 +13,6 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-var obj = { "foo" : "bar" };
 app.get('/getItems', function(req, res) {
 
     res.contentType('application/json');
