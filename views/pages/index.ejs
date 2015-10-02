@@ -6,12 +6,12 @@
     
 <script>
     
-var table=document.getElementById("table");
+var table=document.getElementById("table1");
     
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(data, status){
-           table.innerHTML ="<tr><th>Name</th><th>Age</th><th>Country</th></tr>"
+           table.innerHTML ="<tr><th>State</th><th>capital</th></tr>";
            var jsonData=JSON.parse(data);
            for(var obj in jsonData){
             table.innerHTML+="<tr><td>"+jsonData[obj].state+ "</td><td>"+jsonData[obj].capital+"</td></tr>";   
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 <button id="button1">Click Me</button>
 
-<table id="table"></table>
+<table id="table1"></table>
 
 </body>
 </html>
