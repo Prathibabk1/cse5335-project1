@@ -24,36 +24,36 @@ var obj=[
             "capital": "Phoenix"
         },
         {
-            state: "Atlanta", 
-            capital :"Georgia"
+            "state": "Atlanta", 
+            "capital" :"Georgia"
         },
         {
-            state:"Arkansas" ,
-            capital:"Little Rock"
+            "state":"Arkansas" ,
+            "capital":"Little Rock"
         },
          {
-            state:"Ohio",
-            capital : "Columbus"
+            "state":"Ohio",
+            "capital" : "Columbus"
         },
         {
-            state:"Kentucky" ,
-            capital:"Frankfort"
+            "state":"Kentucky" ,
+            "capital":"Frankfort"
         },
         {
-            state:"Colorado",
-            capital : "Denver"
+            "state":"Colorado",
+            "capital" : "Denver"
         },
         {
-            state:"North Carolina",
-            capital :"Raleigh"
+            "state":"North Carolina",
+            "capital" :"Raleigh"
         },
          {
-            state:"South Carolina",
-             capital : "Columbia"
+            "state":"South Carolina",
+             "capital" : "Columbia"
         },
         {
-            state:"Pennsylvania",
-            capital:"Harrisburg"
+            "state":"Pennsylvania",
+            "capital":"Harrisburg"
         }
     ]
 app.get('/getItems', function(req, res) {
