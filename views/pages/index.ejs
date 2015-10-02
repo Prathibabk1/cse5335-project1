@@ -5,15 +5,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
 <script>
-       
+    
+var th="<tr><th>State</th><th>Capital</th></tr>";
+    $("#table1").append(th);
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(obj, status){
     for(var i=0;i<obj.length;i++)
     {
-        var tr="<tr><th>State</th><th>Capital</th><tr>";
+        var tr="<tr>";
         var td1="<td>"+obj[i]["state"]+"</td>";
-        var td2="<td>"+obj[i]["capital"]+"</td>";
+        var td2="<td>"+obj[i]["capital"]+"</td></tr>";
         
 
        $("#table1").append(tr+td1+td2); 
