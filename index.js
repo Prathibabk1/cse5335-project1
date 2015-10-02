@@ -20,12 +20,12 @@ var obj=[
             capital: "Autsin"
         },
         {
-           state:"Texas",
-            capital: "Autsin"
+           state:"Arizona", 
+            capital: "Phoenix"
         },
         {
-            state:"Texas",
-            capital: "Autsin"
+            state: "Atlanta", 
+            capital :"Georgia"
         }
     ]
 app.get('/getItems', function(req, res) {

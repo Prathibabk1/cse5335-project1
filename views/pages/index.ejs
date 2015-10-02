@@ -6,11 +6,12 @@
     
 <script>
     
-var th="<tr><th>State</th><th>Capital</th></tr>";
-    $("#table1").append(th);
+
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(obj, status){
+           var th="<tr><th>State</th><th>Capital</th></tr>";
+           $("#table1").append(th);
     for(var i=0;i<obj.length;i++)
     {
         var tr="<tr>";
