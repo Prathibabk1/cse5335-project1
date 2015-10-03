@@ -22,10 +22,7 @@ $(document).ready(function(){
        $("#table1").append(tr+td1+td2); 
 
     }   
-
-        
-        
-           
+  
         });
     });
 	
@@ -33,25 +30,24 @@ $(document).ready(function(){
 </script>
     
     
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
-var map;     
-var marker;
-var infoWindow= new google.maps.InfoWindow();
+    
 
-function initialize()
+var infoWindow= new google.maps.InfoWindow();
+var myCenter=new google.maps.LatLng(13.05,80.18);
+
+    function initialize()
 { 
  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(13.05,80.18)
+    
+    center: mycenter ,
+     zoom: 8,
+     mapTypeId:google.maps.MapTypeId.ROADMAP
  };
 	
-  map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+ var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
 }
-
-
-
-
 
 function getLocation(){
 var location= document.getElementById('latlng').value;
@@ -59,18 +55,15 @@ console.log("test:"+ location);
 var locString=location.split(',',2);
 var lat=parseFloat(locString[0]);
 var lon=parseFloat(locString[1]);
+console.log("test1:"+lat +":"+lon
 var latlng = new google.maps.LatLng(lat,lon);
 map.setZoom(11);
-marker=new google.maps.Marker({
+
+var marker=new google.maps.Marker({
 position: latlng,
-map: map
 });
 
-
-      infoWindow.setContent(location);
-  
-
-    infoWindow.open(map,marker);
+    marker.setMap(location);
   
 }
 
