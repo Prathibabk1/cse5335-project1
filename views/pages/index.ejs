@@ -60,12 +60,13 @@ console.log("test1:"+lat +":"+lon);
 var latlng = new google.maps.LatLng(lat,lon);
 map.setZoom(11);
 
-var marker=new google.maps.Marker({
+marker=new google.maps.Marker({
 position: latlng,
 map:map
 });
 
-    marker.setMap(location);
+    infoWindow.setContent(location);
+    infoWindow.open(map,marker);
   
 }
 
