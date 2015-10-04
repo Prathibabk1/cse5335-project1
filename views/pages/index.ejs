@@ -60,6 +60,7 @@ $(document).ready(function(){
 	   $.get("/getItems1", function(obj, status){            
     for(var i=0;i<obj.length;i++)
     {
+        console.log(obj.length);
         if(obj.length-2){
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
             console.log("if");
