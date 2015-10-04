@@ -68,14 +68,14 @@ $(document).ready(function(){
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
         console.log(locations);
     }   
-  
+  locations=arr1+locations+arr3;
+      console.log(locations);
         });
     });
 	
    });
       
-    locations=arr1+locations+arr3;
-      console.log(locations);
+    
 
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
