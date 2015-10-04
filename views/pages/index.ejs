@@ -54,29 +54,26 @@ $(document).ready(function(){
   <script type="text/javascript">
       
            var locations=[];
+      var loc;
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){  
-           
-           var obj1 = JSON.parse(obj);
-           console.log(obj1);
+       
     for(var i=0;i<obj.length;i++)
     {
         console.log(obj.length);
-        if(i<obj.length-1){
-            locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
-        }
-        else
-        {
-        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
-        }
+
+            loc+=obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"];
         
-    }   
+    }  
+           
+loc.split(",",3);
+console.log(loc);
+ //locations = JSON.parse("[" + loc + "]");
 
            
- console.log(locations);
-console.log(locations.length);
-   
+
+  console.log(locations.length); 
    var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
