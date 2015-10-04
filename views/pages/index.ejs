@@ -52,8 +52,7 @@ $(document).ready(function(){
 
 
   <script type="text/javascript">
-      var arr1="[";
-           var arr3="]";
+      
            var locations=[];
       $(document).ready(function(){
     $("#button2").click(function(){
@@ -63,8 +62,6 @@ $(document).ready(function(){
         console.log(obj.length);
         if(i<obj.length-1){
             locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
-        console.log("elsee");
-        
         }
         else
         {
@@ -73,7 +70,7 @@ $(document).ready(function(){
         }
         
     }   
-  locations=arr1+locations+arr3;
+  
  console.log(locations);
 console.log(locations.length);
    
