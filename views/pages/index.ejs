@@ -34,10 +34,11 @@ $(document).ready(function(){
           type="text/javascript"></script>
   
 </head>
+    
 
 <body>
 
- <h2>Click to display a table</h2>
+ <h3>Click to display a table</h3>
 
 <button id="button1">Click Me</button>
 
@@ -45,18 +46,15 @@ $(document).ready(function(){
     
     
 <br></br>  <br></br> 
-<h3>Click button "Click Map" to display location of the particular "Latlng" </h3>  
-<button id="button2">Click Me!!</button>
+<h3>Click button "Click Map" to display locations based on" </h3>  
+<button id="button2">Click Map!!</button>
 
 <div id="map" style="width: 500px; height: 400px;"></div>
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
       
-           var locations=[];
-      var loc="";
-      var loc1;
-      $(document).ready(function(){
+$(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){  
            
@@ -65,18 +63,17 @@ $(document).ready(function(){
     var marker, i,lat,lon;
     var loc=[];
 
-    for (i = 0; i < obj.length; i++) {  
-        console.log("hello2   " +  obj.length);
+    for (i = 0; i < obj.length; i++) {
         
         lat=obj[i]["latitude"];
         lon=obj[i]["longitude"];
         loc.push(obj[i]["location"]);
-        console.log(loc);
+    
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lon),
         map: map
       });
-console.log(loc);
+
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           infowindow.setContent(loc[i]);
