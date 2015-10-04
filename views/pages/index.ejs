@@ -71,6 +71,7 @@ $(document).ready(function(){
         lat=obj[i]["latitude"];
         lon=obj[i]["longitude"];
         loc=obj[i]["location"];
+        console(loc);
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lon),
         map: map
