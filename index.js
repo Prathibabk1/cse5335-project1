@@ -55,13 +55,28 @@ var obj=[
             "state":"Pennsylvania",
             "capital":"Harrisburg"
         }
-    ]
+    ];
 app.get('/getItems', function(req, res) {
 
     res.contentType('application/json');
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.json(obj)
 }); 
+
+
+var obj2=[{"location":"Bondi Beach", "latitude":-33.890542,"longitude": 151.274856},
+          {"location":'Coogee Beach',"latitude": -33.923036,"longitude": 151.259052},
+          {"location":'Cronulla Beach',"latitude": -34.028249,"longitude": 151.157507},
+          {"location":'Manly Beach',"latitude": -33.80010128657071,"longitude": 151.28747820854187},
+          {"location":'Maroubra Beach',"latitude": -33.950198, "longitude": 151.259302}
+         ];
+app.get('/getItems1', function(req, res) {
+
+    res.contentType('application/json');
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.json(obj2)
+}); 
+
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
