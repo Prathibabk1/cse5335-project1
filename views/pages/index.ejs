@@ -62,18 +62,22 @@ $(document).ready(function(){
            
    var infowindow = new google.maps.InfoWindow();
 
-    var marker, i;
+    var marker, i,lat,lon,loc;
 
     for (i = 0; i < obj.length; i++) {  
         console.log("hello2   " +  obj.length);
+        
+        lat=obj[i]["latitude"];
+        lon=obj[i]["longitude"];
+        loc=obj[i]["locaiton"];
       marker = new google.maps.Marker({
-        position: new google.maps.LatLng(obj[i]["latitude"], obj[i]["longitude]),
+        position: new google.maps.LatLng(lat, lon),
         map: map
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(obj[i]["locaiton"]);
+          infowindow.setContent(loc);
           infowindow.open(map, marker);
         }
       })(marker, i));
