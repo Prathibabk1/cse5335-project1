@@ -60,7 +60,7 @@ app.get('/getItems', function(req, res) {
 
     res.contentType('application/json');
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.json(obj)
+    res.json(obj);
 }); 
 
 
@@ -74,7 +74,7 @@ app.get('/getItems1', function(req, res) {
 
     res.contentType('application/json');
     res.setHeader("Access-Control-Allow-Origin", "*");
-    res.json(obj2)
+    res.json(obj2);
 }); 
 
 

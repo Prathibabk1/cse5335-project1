@@ -58,6 +58,7 @@ $(document).ready(function(){
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){
+           console.log("hello");
                  
     for(var i=0;i<obj.length;i++)
     {
@@ -65,7 +66,7 @@ $(document).ready(function(){
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
         else
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
-        
+        console.log(locations);
     }   
   
         });
