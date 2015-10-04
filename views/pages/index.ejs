@@ -56,7 +56,10 @@ $(document).ready(function(){
            var locations=[];
       $(document).ready(function(){
     $("#button2").click(function(){
-	   $.get("/getItems1", function(obj, status){            
+	   $.get("/getItems1", function(obj, status){  
+           
+           var obj = JSON.parse(obj);
+           console.log(obj);
     for(var i=0;i<obj.length;i++)
     {
         console.log(obj.length);
@@ -66,11 +69,11 @@ $(document).ready(function(){
         else
         {
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
-            console.log("if");
         }
         
     }   
-  
+
+           
  console.log(locations);
 console.log(locations.length);
    
