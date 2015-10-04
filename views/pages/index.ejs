@@ -62,13 +62,14 @@ $(document).ready(function(){
     {
         console.log(obj.length);
         if(i<obj.length-1){
-        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
-            console.log("if");
+            locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
+        console.log("elsee");
+        
         }
         else
         {
-        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
-        console.log("elsee");
+        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
+            console.log("if");
         }
         
     }   
