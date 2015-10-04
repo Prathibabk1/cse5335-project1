@@ -54,7 +54,7 @@ $(document).ready(function(){
   <script type="text/javascript">
       var arr1="[";
            var arr3="]";
-           var locations;
+           var locations=[];
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){
@@ -62,7 +62,7 @@ $(document).ready(function(){
                  
     for(var i=0;i<obj.length;i++)
     {
-        if(!obj.length-2)
+        if(!(obj.length-1))
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
         else
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
