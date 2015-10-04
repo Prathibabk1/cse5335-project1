@@ -76,7 +76,7 @@ $(document).ready(function(){
         position: new google.maps.LatLng(lat, lon),
         map: map
       });
-
+console.log(loc);
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           infowindow.setContent(loc[i]);
