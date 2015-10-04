@@ -60,8 +60,9 @@ $(document).ready(function(){
 	   $.get("/getItems1", function(obj, status){            
     for(var i=0;i<obj.length;i++)
     {
-        if(!(obj.length-1))
-        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
+        if(!(obj.length-1)){
+            console.log("hello1111");
+        locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";}
         else
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
     }   
