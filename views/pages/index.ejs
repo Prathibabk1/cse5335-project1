@@ -70,7 +70,7 @@ $(document).ready(function(){
         
         lat=obj[i]["latitude"];
         lon=obj[i]["longitude"];
-        loc=obj[i]["location"];
+        loc+=obj[i]["location"];
         console.log(loc);
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lon),
