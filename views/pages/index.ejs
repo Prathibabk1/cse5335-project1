@@ -52,14 +52,13 @@ $(document).ready(function(){
 
 
   <script type="text/javascript">
-      
+      var arr1="[";
+           var arr3="]";
+           var locations;
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){
-           var arr1="[";
-           var arr3="]";
-           var locations;
-           
+                 
     for(var i=0;i<obj.length;i++)
     {
         if(!obj.length-2)
