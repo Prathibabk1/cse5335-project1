@@ -58,8 +58,8 @@ $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){  
            
-           var obj = JSON.parse(obj);
-           console.log(obj);
+           var obj1 = JSON.parse(obj);
+           console.log(obj1);
     for(var i=0;i<obj.length;i++)
     {
         console.log(obj.length);
