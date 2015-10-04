@@ -60,10 +60,15 @@ $(document).ready(function(){
 	   $.get("/getItems1", function(obj, status){            
     for(var i=0;i<obj.length;i++)
     {
-        if(obj.length-1)
+        if(obj.length-1){
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
+            console.log("if");
+        }
         else
+        {
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
+        console.log("elsee);
+        }
         
     }   
   locations=arr1+locations+arr3;
