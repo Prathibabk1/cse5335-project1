@@ -57,24 +57,23 @@ $(document).ready(function(){
            var locations=[];
       $(document).ready(function(){
     $("#button2").click(function(){
-	   $.get("/getItems1", function(obj, status){
-           console.log("hello");
-                 
+	   $.get("/getItems1", function(obj, status){            
     for(var i=0;i<obj.length;i++)
     {
         if(!(obj.length-1))
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "],";
         else
         locations+="["+obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+ "]";
-        console.log(locations);
     }   
   locations=arr1+locations+arr3;
-      console.log(locations);
-           var infowindow = new google.maps.InfoWindow();
+ console.log(locations);
+   
+   var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
+        console.log("hello2"+locations.length);
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map
