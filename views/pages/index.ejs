@@ -64,7 +64,7 @@ $(document).ready(function(){
 
     var marker, i;
 
-    for (i = 0; i < locations.length; i++) {  
+    for (i = 0; i < obj.length; i++) {  
         console.log("hello2   " +  obj.length);
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(obj[i]["latitude"], obj[i]["longitude]),
