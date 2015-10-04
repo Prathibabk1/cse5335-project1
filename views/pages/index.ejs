@@ -55,6 +55,7 @@ $(document).ready(function(){
       
            var locations=[];
       var loc;
+      var loc1;
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){  
@@ -63,11 +64,11 @@ $(document).ready(function(){
     {
         console.log(obj.length);
 
-            loc+=obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"];
+            loc+=obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+",";
         
     }  
            
-loc.split(",",3);
+loc1=loc.split(",",3);
 console.log(loc);
  //locations = JSON.parse("[" + loc + "]");
 
