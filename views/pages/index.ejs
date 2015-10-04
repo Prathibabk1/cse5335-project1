@@ -59,37 +59,21 @@ $(document).ready(function(){
       $(document).ready(function(){
     $("#button2").click(function(){
 	   $.get("/getItems1", function(obj, status){  
-       
-    for(var i=0;i<obj.length;i++)
-    {
-        console.log(obj.length);
-
-            loc+=obj[i]["location"]+","+ obj[i]["latitude"]+","+ obj[i]["longitude"]+",";
-        
-    }  
-console.log(loc);
-    
-loc1=loc.split(",",3);
-console.log(loc1);
- locations=loc1;
-
            
-
-  console.log(locations.length); 
    var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
-        console.log("hello2   " +  locations.length);
+        console.log("hello2   " +  obj.length);
       marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        position: new google.maps.LatLng(obj[i]["latitude"], obj[i]["longitude]),
         map: map
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0]);
+          infowindow.setContent(obj[i]["locaiton"]);
           infowindow.open(map, marker);
         }
       })(marker, i));
