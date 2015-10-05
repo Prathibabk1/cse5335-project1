@@ -10,7 +10,28 @@
 <script src="https://maps.google.com/maps/api/js?sensor=false" 
           type="text/javascript"></script>
     
-    <script type="text/javascript">
+    
+    
+    
+  
+</head>
+    
+
+<body>
+
+ <h3>Click to display a table</h3>
+
+<button id="button1">Click Me</button>
+
+<table id="table1" border="1" style="width:50%"></table>
+    
+    
+<br></br>  <br></br> 
+<br/><br/>
+
+<div id="map" style="width: 500px; height: 400px;"></div>
+
+<script type="text/javascript">
     
 
 $(document).ready(function(){
@@ -29,7 +50,7 @@ $(document).ready(function(){
 
     }   
            
-           
+       console.log("table");    
     var infowindow = new google.maps.InfoWindow();
 
     var marker, j,lat,lon;
@@ -69,25 +90,6 @@ $(document).ready(function(){
     });
 
 </script>
-    
-    
-  
-</head>
-    
-
-<body>
-
- <h3>Click to display a table</h3>
-
-<button id="button1">Click Me</button>
-
-<table id="table1" border="1" style="width:50%"></table>
-    
-    
-<br></br>  <br></br> 
-<br/><br/>
-
-<div id="map" style="width: 500px; height: 400px;"></div>
 
 
 
