@@ -39,29 +39,30 @@
 
 <script type="text/javascript">
     
-
+var th,tr,td1,td2;
 $(document).ready(function(){
     $("#button1").click(function(){
 	   $.get("/getItems", function(obj, status){
-           var th="<tr><th>State</th><th>Capital</th></tr>";
+         th="<tr><th>State</th><th>Capital</th></tr>";
            $("#table1").append(th);
     for(var i=0;i<obj.length;i++)
     {
-        var tr="<tr>";
-        var td1="<td>"+obj[i]["state"]+"</td>";
-        var td2="<td>"+obj[i]["capital"]+"</td></tr>";
+         tr="<tr>";
+         td1="<td>"+obj[i]["state"]+"</td>";
+        td2="<td>"+obj[i]["capital"]+"</td></tr>";
         
 
        $("#table1").append(tr+td1+td2); 
+        
+        
 
     }   
            
-    var length= $("#table1").find('td:td').length;	
-	console.log(length);
-	
-	if(length==0){
-	$("#table").append(txt).removeClass("hidden");
+if(obj.length==0){
+	$("#table").append(tr+td1+td2).removeClass("hidden");
     }
+	
+	
               
     var infowindow = new google.maps.InfoWindow();
 
