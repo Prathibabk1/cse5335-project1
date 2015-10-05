@@ -9,7 +9,8 @@
           type="text/javascript"></script>   
     <style>
 .tab{
- border: 1px solid black;
+ border-style: solid;
+    border-width: 5px;
 }
 
  html, body {
@@ -52,7 +53,7 @@ $(document).ready(function(){
         td2="<td>"+obj[i]["capital"]+"</td></tr>";
         
 
-       $("#table1").append(tr+td1+td2);    
+       $("#table1").append(tr+td1+td2).addClass('tab');;    
 
     }   
            
