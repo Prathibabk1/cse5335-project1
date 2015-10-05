@@ -18,52 +18,72 @@ var obj=[
         {
             "state":"Texas",
             "capital": "Autsin",
-            "location":"Bondi Beach", "latitude":-33.890542,"longitude": 151.274856
+            "location":"Bondi Beach",
+            "latitude":-33.890542,
+            "longitude": 151.274856
         },
         {
            "state":"Arizona", 
-            "capital": "Phoenix"
-            "location":'Coogee Beach',"latitude": -33.923036,"longitude": 151.259052
+            "capital": "Phoenix",
+            "location":"Coogee Beach",
+            "latitude": -33.923036,
+            "longitude": 151.259052
         },
         {
             "state": "Atlanta", 
             "capital" :"Georgia",
-            "location":'Cronulla Beach',"latitude": -34.028249,"longitude": 151.157507
+            "location":"Cronulla Beach",
+            "latitude": -34.028249,
+            "longitude": 151.157507
         },
         {
             "state":"Arkansas" ,
             "capital":"Little Rock",
-            "location":'Manly Beach',"latitude": -33.80010128657071,"longitude": 151.28747820854187
+            "location":"Manly Beach",
+            "latitude": -33.80010128657071,
+            "longitude": 151.28747820854187
         },
          {
             "state":"Ohio",
             "capital" : "Columbus",
-             "location":'Maroubra Beach',"latitude": -33.950198, "longitude": 151.259302
+             "location":"Maroubra Beach",
+             "latitude": -33.950198,
+             "longitude": 151.259302
         },
         {
             "state":"Kentucky" ,
             "capital":"Frankfort",
-            "location":'Maroubra Beach',"latitude": -33.50198, "longitude": 151.25902
+            "location":"Maroubra Beach",
+            "latitude": -33.50198, 
+            "longitude": 151.25902
         },
         {
             "state":"Colorado",
             "capital" : "Denver",
-            "location":'Maroubra Beach',"latitude": -33.95018, "longitude": 151.29302
+            "location":"Maroubra Beach",
+            "latitude": -33.95018,
+            "longitude": 151.29302
         },
         {
             "state":"North Carolina",
             "capital" :"Raleigh",
-            "location":'Maroubra Beach',"latitude": -33.90198, "longitude": 151.25302
+            "location":'Maroubra Beach',
+            "latitude": -33.90198,
+            "longitude": 151.25302
         },
          {
             "state":"South Carolina",
              "capital" : "Columbia",
-             "location":'Maroubra Beach',"latitude": -33.95098, "longitude": 151.25902
+             "location":"Maroubra Beach",
+             "latitude": -33.95098,
+             "longitude": 151.25902
         },
         {
             "state":"Pennsylvania",
             "capital":"Harrisburg",
-            "location":'Maroubra Beach',"latitude": -33.95018, "longitude": 151.25930
+            "location":"Maroubra Beach",
+            "latitude": -33.95018,
+            "longitude": 151.25930
         }
     ];
 app.get('/getItems', function(req, res) {

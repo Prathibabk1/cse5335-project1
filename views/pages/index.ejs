@@ -28,7 +28,7 @@
     
 <br></br>  <br></br> 
 <br/><br/>
-
+<h3>Map with markers</h3>
 <div id="map" style="width: 500px; height: 400px;"></div>
 
 <script type="text/javascript">
@@ -51,29 +51,7 @@ $(document).ready(function(){
     }   
            
        console.log("table");    
-    var infowindow = new google.maps.InfoWindow();
-
-    var marker, j,lat,lon;
-    var loc=[];
-
-    for (j = 0; j < obj.length; j++) {
-        
-        lat=obj[j]["latitude"];
-        lon=obj[j]["longitude"];
-        loc.push(obj[j]["location"]);
     
-      marker = new google.maps.Marker({
-        position: new google.maps.LatLng(lat, lon),
-        map: map
-      });
-
-      google.maps.event.addListener(marker, 'click', (function(marker, j) {
-        return function() {
-          infowindow.setContent(loc[j]);
-          infowindow.open(map, marker);
-        }
-      })(marker, j));
-    }
               
            
   
@@ -82,12 +60,7 @@ $(document).ready(function(){
 	
    });
     
-    
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 10,
-      center: new google.maps.LatLng(-33.92, 151.25),
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
+   
 
 </script>
 
