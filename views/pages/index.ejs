@@ -51,7 +51,30 @@ $(document).ready(function(){
     }   
            
        console.log("table");    
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, j,lat,lon;
+    var loc=[];
+
+    for (j = 0; j < obj.length; j++) {
+        
+        lat=obj[j]["latitude"];
+        lon=obj[j]["longitude"];
+        loc.push(obj[j]["location"]);
     
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, lon),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, j) {
+        return function() {
+          infowindow.setContent(loc[j]);
+          infowindow.open(map, marker);
+        }
+      })(marker, j));
+    }
+
               
            
   
