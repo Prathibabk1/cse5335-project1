@@ -1,38 +1,47 @@
-# node-js-getting-started
+# Web Server Framework
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+I used Express server framewok as it is a flexible Node.js web application framework which provides robust features for web applications. It is server-side JavaScript web development framework built on node.js and Chrome's V8 JavaScript engine. Node.js is a javascript runtime and uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js package scheme, npm, is the largest open source library.
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+# Client Framework
+ I used jquery as my client framework.jQuery is a JavaScript Library.jQuery greatly simplifies JavaScript programming and is easy to learn. It is a open source framework with huge library.It also suports cross platform and enables building animated applications.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+# Implemenation easy
+I found implementing the server side easy as i could use the git hub getting started with heroku  [https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction][df1] sample application as the starting point to understand the directory structures and the semantics. 
 
-## Running Locally
+# Implemenation difficult
+I found implementing the client side jquery a bit difficult as it took quite long to understand the syntax and semantics. The extra credit google maps integration with the existing app and displaying markers took time to figure out that the maps initialization was not loading in head tag.
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+# Deploying to Heroku
 
+Make sure you have Node.js and the Heroku Toolbelt installed.
 ```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
+ $ heroku login
 ```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
+```sh
+$ git clone https://github.com/Prathibabk1/cse5335-project1.git
+$ cd cse5335-project1
 ```
-$ heroku create
+```sh
+$ heroku create 
 $ git push heroku master
 $ heroku open
 ```
 
-## Documentation
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
 
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
